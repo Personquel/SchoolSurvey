@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - SurveyPro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">📊</span>
+            <span class="logo-text">SurveyPro</span>
+        </div>
+        <nav class="menu">
+            <a href="welcome.html" class="menu-item">Home</a>
+            <a href="survey.html" class="menu-item">Survey</a>
+            <a href="about.html" class="menu-item active">About</a>
+            <a href="contact.html" class="menu-item">Contact</a>
+        </nav>
+        <div class="theme-toggle">
+            <button id="themeToggle" aria-label="Toggle theme">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+        </div>
+    </header>
+    <div class="page-container">
+        <h1>About SurveyPro</h1>
+        <div class="about-content">
+            <div class="about-section">
+                <h2>Our Mission</h2>
+                <p>We help organizations gather valuable feedback through simple, effective surveys that drive meaningful insights and improvements.</p>
+            </div>
+            <div class="about-section">
+                <h2>Why Choose Us</h2>
+                <div class="benefits">
+                    <div class="benefit">
+                        <span class="benefit-icon">🚀</span>
+                        <h3>Fast & Efficient</h3>
+                        <p>Quick surveys that respect your time</p>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">🔒</span>
+                        <h3>Secure & Private</h3>
+                        <p>Your data is protected and confidential</p>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">📈</span>
+                        <h3>Actionable Insights</h3>
+                        <p>Data that drives real improvements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 SurveyPro. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey - Survey Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button id="themeToggle" aria-label="Toggle theme">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="survey-header">
+            <a href="welcome.html" class="back-btn">← Back to Home</a>
+            <h1>Survey</h1>
+            <p class="survey-description">Please take a moment to answer these questions</p>
+        </div>
+        <form id="surveyForm">
+            <div id="questions-container"></div>
+            <button type="submit" id="submitBtn" disabled>Submit Survey</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 SurveyPro. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
